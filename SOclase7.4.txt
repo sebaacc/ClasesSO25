@@ -16,5 +16,7 @@ cd = para moverse entre directorios. Change Directory.
 
 man= da info de otro comando. Ej: man mkdir
 
+Apretando dos veces Tab se ven los archivos existentes.
 
-
+Hay que salir con "exit", "logout" o ctrl+d. Graceful exit
+comando "history" muestra todos los comandos hechos.
