@@ -1,0 +1,20 @@
+ssh -p 8632 usuario@190.210.55.43
+
+-enter-
+
+usuario primera letra nombre + apellido.
+contraseña dni.
+
+pwd = ver ubicaciòn actual
+ls = listar archivos existentes o carpetas/directorios.
+ls -R para listar carpetas y los archivos que incluyen. Recursivo
+
+direcciones absolutas (completas desde la unidad principal) o relativas (a la ubicaciòn actual)
+virguilla = /home/usuario ... se puede hacer con F8 en el cli.
+
+cd = para moverse entre directorios. Change Directory.
+
+man= da info de otro comando. Ej: man mkdir
+
+
+
