@@ -39,3 +39,19 @@ Ejemplos:
 cp archivo.txt archivo.txt-BKP => es para hacer backup. Esto va a copiar el mismo archivo en el directorio con la extension .txt-BKP
 
 file => acompañado del nombre del archivo sirve para ver el tipo de archivo que es.
+echo => para mostrar cosas en pantalla. echo $0 =>nos dice que interprete estamos utilizando.
+ 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+	Hablamos de conceptos en Sistemas operativos
+Cuando inicia el sistema operativo, se inica el SUPERVISOR.
+Administradores.
+
+System Calls - Interrupciones de sistema. Son de las interrupciones más importantes, que sirven en caso de falla.
+Un intérprete transforma un código en objeto para luego poder ejecutarse.
+Programa objeto.
+Ensamblador o Asembler. Toma un objeto que ya ha sido compilado o programa objeto, y lo deja listo para ser ejecutable.
+Cargador. Encargado de ejecutar y cargar el programa objeto procesado por el ensamblador para verlo.
+A diferencia de un compilador, el intérprete lee línea por línea (sentencias).
+Utilitarios:  programas que realizan tareas rutinarias y de propósitos específicos. Tales como el cp, mv, ls, etc. También desfragmentadores de disco, gestor  de cola de archivos, etc.
+
