@@ -1,0 +1,41 @@
+Al poner el comando: ls -l  nos muestra todos los archivos del directorio e información adicional, la cual se puede leer de esta manera:
+
+Total 20 => significa que el espacio utilizado alcanza los 20 bloques.
+
+drwxrwxr-x 2 nuevo2 nuevo2 4096 abr  7 15:34 Actual => información del archivo
+U G O
+ primera d es el tipo de archivo. d = directorio,
+ permisos del owner ejemplo: rwx read write execute.
+ r-x = O. 
+ 2 = Enlaces 
+ Propietario = nuevo2 
+ Grupo nuevo2
+ t.b 4096
+ fecha abr 7 15:34 
+ Actual es el archivo creado.
+
+
+El - al inicio es un tipo de archivo regular, como fichero de texto. Los demás - guiones significan que no tiene ese permiso.
+
+Si se usa touch para crear un archivo regular que ya existe, solo le modifica la fecha.
+
+nano con el mismo archivo, entra al ya creado y permite editarlo.
+
+less archivo1.txt nos permite visualizar el archivo pero no escribirlo.
+
+... estos comandos llaman a aplicativos, o aplicaciones que nos dan estas funcionalidades.
+
+El comando cat es otro aplicativo que permite incluso ver dos archivos a la vez:
+Sintaxis básica:
+	cat [opciones] [archivo(s)]. 
+Ejemplos:
+	cat archivo.txt: Muestra el contenido del archivo archivo.txt. 
+	cat archivo1.txt archivo2.txt: Muestra el contenido de ambos archivos, uno después del otro. 
+	cat > nuevo_archivo.txt: Permite crear un archivo y escribir contenido en él desde la terminal. 
+	cat archivo.txt > nuevo_archivo.txt: Copia el contenido de archivo.txt a nuevo_archivo.txt. 
+	cat archivo.txt | more: Muestra el contenido de archivo.txt paginado (útil para archivos grandes). 
+
+
+cp archivo.txt archivo.txt-BKP => es para hacer backup. Esto va a copiar el mismo archivo en el directorio con la extension .txt-BKP
+
+file => acompañado del nombre del archivo sirve para ver el tipo de archivo que es.
