@@ -30,11 +30,12 @@ cat fichero1.txt RedirecionSalidaEstandar.txt NoExiste.txt > salidaError.txt 2>&
 ```  
 En el contexto de la terminal de Linux (y otros sistemas Unix-like), 2>&1 es una redirección del error estándar (stderr) a la misma ubicación que la salida estándar (stdout). Vamos a desglosarlo:  
 
-2: Representa el descriptor de archivo asociado con el error estándar (stderr). En los sistemas Unix, a cada flujo de entrada/salida se le asigna un número de descriptor. El 0 es para la entrada estándar (stdin), el 1 para la salida estándar (stdout), y el 2 para el error estándar (stderr).  
+>2: Representa el descriptor de archivo asociado con el error estándar (stderr). En los sistemas Unix, a cada flujo de entrada/salida se le asigna un número de descriptor. El 0 es para la entrada estándar (stdin), el 1 para la salida estándar (stdout), y el 2 para el error estándar (stderr).  
 
->: Normalmente, este símbolo se utiliza para redirigir la salida. Cuando se usa solo con un descriptor de archivo (como 2>), redirige ese flujo a un archivo específico.  
+>.>: Normalmente, este símbolo se utiliza para redirigir la salida. Cuando se usa solo con un descriptor de archivo (como 2>), redirige ese flujo a un archivo específico.  
 
-&1: Aquí, el & antes del 1 es importante. Indica que no se está redirigiendo al archivo llamado "1", sino que se está redirigiendo al mismo destino al que apunta el descriptor de archivo número 1 (stdout) en ese momento.  
+>&1: Aquí, el & antes del 1 es importante. Indica que no se está redirigiendo al archivo llamado "1", sino que se está redirigiendo al mismo destino al que apunta el descriptor de archivo número 1 (stdout) en ese momento.  
 
 En resumen, 2>&1 toma todo lo que normalmente se enviaría al error estándar y lo dirige al mismo lugar donde se está enviando la salida estándar.
 
+Usamos "wc -l" como ejercicio de ejemplo de standard in. Este comando cuenta la cantidad de líneas. Como no le ingresamos ningun archivo, le escribimos a mano las frases que queramos.  
