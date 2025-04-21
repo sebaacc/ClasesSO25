@@ -130,7 +130,7 @@ En resumen, 2>&1 toma todo lo que normalmente se enviaría al error estándar y 
 
 Usamos "wc -l" como ejercicio de ejemplo de standard in. Este comando cuenta la cantidad de líneas. Como no le ingresamos ningun archivo, le escribimos a mano las frases que queramos.  
 
-## Clase 21/04
+## Clase 21 de Abril
 
 Ejercicio práctico. 
 
