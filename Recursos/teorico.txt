@@ -1,0 +1,37 @@
+¿Qué Sistema Operativo deriva de D.O.S.?
+FreeDOS
+Unix
+Multics
+MacOs
+Windows
+Linux
+
+En este tipo de Sistema Operativo solo puede ejecutarse concurrentemente con el Sistema Base un solo programa-problema
+Multiprocesamiento
+Monoprogramación
+Coprocesamiento
+Multiprogramación
+Monousuario
+Multiusuario
+
+¿Que indica el primer bit de una salida  estándar cuando hacemos un listado en su formato largo: ls -l ?
+El tipo de fichero.
+Si es un directorio.
+Los permisos del Grupo.
+Los permisos del Usuario.
+
+¿De las siguientes opciones cuales me permiten cambiar de nombre al fichero Pepito.txt, dentro del mismo directorio, recuerda que solo tiene permisos en su home (/home/miusuario/?
+miusuario@server:~$ mv /miusuario/Pepito.txt /miusuario/Pepon.txt
+miusuario@server:~$ mv ~/Pepito.txt /home/MiUsuario/Pepon.txt
+miusuario@server:/etc$ mv ~/Pepito.txt ./Pepon.txt
+miusuario@server:/etc$ chname ~/Pepito.txt ~/Pepon.txt
+miusuario@server:~$ mv Pepito.txt Pepon.txt
+miusuario@server:/etc$ mv Pepito.txt Pepon.txt
+miusuario@server:~$ cp Pepito.txt Pepon.txt; rm Pepito.txt
+miusuario@server:~/Directorio$ mv ~/Pepito.txt ../Pepon.txt
+
+¿Que indica el primer bit de una salida  estándar cuando hacemos un listado en su formato largo: ls -l ?
+El tipo de fichero.
+Si es un directorio.
+Los permisos del Grupo.
+Los permisos del Usuario.
