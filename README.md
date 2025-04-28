@@ -154,4 +154,73 @@ echo Pedrito tenia un perrito chiquitito 1> MiPrimerFichero.txt
 luego con este comando copio el mismo contenido pero evitando el clobering o la sobreescritura (con ">>")...
 ```
 echo Pedrito tenia un perrito chiquitito >> MiPrimerFichero.txt
+``` 
+## Clase 28 de Abril  
+Vimos desde pág. 61. Hay que leer hasta pág 72. 
+
+| Significado     | Letra  |
+|-----------------|--------|
+| Archivo regular |    -   |
+| Directorio      |    d   | 
+| Leer            |    r   |
+| Escribir        |    w   |
+| Ejecutar        |    x   |
+
+Enlaces simbolicos (acceso directo) y enlaces duros.
+Le hacemos un softlink a un fichero en nuestra carpeta.
+ln -s path nombredelacceso.ln
+
+La ruta que pongamos debe de ser Absoluta. Porque al usar este acceso directo desde otra ubicación no va a funcionar.
+
+Los "modos" en linux son los permisos de un archivo.  
+
+| U  |  G  | O   |
+|----|-----|-----|
+|rwx | +w+ | rw- |   
+
+(Usuario (User), Grupo (Group) y Otros (Others))
+
+```
+chmod g+x Ejecutable.sh //Esto utilizó el profe para darnos permisos de Ejecución sobre el archivo 
+chmod g-r Ejecutable.sh //Para SACAR permisos de lectura sobre el archivo   
 ```  
+* Modo caracter  
+chmod +  
+
+| Significado     | Letra  |
+|-----------------|--------|
+| usuario propietario | u   |
+| grupo|    g | 
+| otros|    o   |
+| agil| a   |
+| igual a   | =  |
+| suma  | + |
+| resta | - |
+
+* Modo Octal  
+
+| Significado     | Letra  |
+|-----------------|--------|
+| Read        | 4  |
+| Write       | 2  | 
+| Execute     | 1  |
+| Sin Permiso | 0  |  
+
+La suma de estos nos da lo siguiente, debemos indicar uno de estos números para cada usuario (UGO):  
+
+* 7 (4 + 2 + 1): read, write, and execute (rwx)
+* 6 (4 + 2 + 0): read and write (rw-)
+* 5 (4 + 0 + 1): read and execute (r-x)
+* 4 (4 + 0 + 0): read only (r--)
+* 3 (0 + 2 + 1): write and execute (-wx)
+* 2 (0 + 2 + 0): write only (-w-)
+* 1 (0 + 0 + 1): execute only (--x)
+* 0 (0 + 0 + 0): no permissions (---)
+
+grep => sirve para buscar cadenas de texto dentro de archivos
+```  
+ls | grep ^P
+```  
+Acá buscó todos los archivos que comienzan con P mayúscula. Si se cambia por s$ => todos los que terminan en s. Sin simbolos busca todas las coincidencias 'grep so'. Si agrega a todo | wc -l => cuenta la cantidad de coincidencias encontradas.  
+
+La diferencia entre pipe y fifo es que el fifo se almacena y el otro no persiste en los archivos de sistema.
