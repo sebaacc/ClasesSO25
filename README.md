@@ -224,3 +224,22 @@ ls | grep ^P
 Acá buscó todos los archivos que comienzan con P mayúscula. Si se cambia por s$ => todos los que terminan en s. Sin simbolos busca todas las coincidencias 'grep so'. Si agrega a todo | wc -l => cuenta la cantidad de coincidencias encontradas.  
 
 La diferencia entre pipe y fifo es que el fifo se almacena y el otro no persiste en los archivos de sistema.
+
+## Clase 05 de Mayo
+Hoy vimos mediante el comando 
+```
+ipconfig /all
+```
+Donde en el mismo se indica datos de conexión. Muestra nuestra Dirección IPv4, Máscara de Subred (Red a la que pertenece la pc, en nuestro caso todas las del lab tienen la misma), aervidores DNS, y puerta de enlace determinada (puerto ip al que se conecta la pc).  
+Luego con el comando  
+```
+ping 'direccion web de lo que quieras'
+```
+nos mostrará la latencia que existe frente a ese sitio web, TTL es el tiempo que esa ip se guardará en caché para nuevas consultas a la misma.  
+### Imagen en usb para instalación de SO
+Para instalar un Sistema operativo como Lubuntu, tenemos que preparar una memoria usb con Rufus, al iniciar ese programa seleccionamos la usb, formato FAT (o FAT32), y seleccionamos la imagen iso correspondiente al nuevo SO.
+Vamos a "instalarlo" como sistema operativo live, quiere decir que es un sistema que podemos usar sin borrar nada del pc, y es portable mediante la usb a otros pc.    
+IMPORTANTE: debemos conservar los datos de conexión de nuestra pc vistos en el ipconfig. IP, Netmask, Port, 
+Luego iniciamos la pc con esta memoria y hay que apretar varias veces f8, se nos abrirá el menu de booteo, o directamente se nos puede iniciar la imagen del usb (como le paso a mariano). Luego seleccionar versión de prueba haciendo click en "try".  
+Una vez iniciado el sistema y funcionando correctamente, nos dirijimos abajo a la derecha en la barra, y configuramos la conexión de red del pc, para poder acceder a internet. Agregamos una nueva red con los datos que guardamos aparte anteriormente.
+Puede pasar que ya exista un perfil anterior de conexión con otros datos incorrectos, en ese caso una vez creado el nuevo, debemos hacer click izquierdo en el logo de conexiones y seleccionar nuestro nuevo perfil. De esta forma accederemos a internet.
