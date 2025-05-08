@@ -225,7 +225,7 @@ Acá buscó todos los archivos que comienzan con P mayúscula. Si se cambia por 
 
 La diferencia entre pipe y fifo es que el fifo se almacena y el otro no persiste en los archivos de sistema.
 
-## Clase 05 de Mayo
+## Clase 5 de Mayo
 Hoy vimos mediante el comando 
 ```
 ipconfig /all
@@ -243,3 +243,48 @@ IMPORTANTE: debemos conservar los datos de conexión de nuestra pc vistos en el 
 Luego iniciamos la pc con esta memoria y hay que apretar varias veces f8, se nos abrirá el menu de booteo, o directamente se nos puede iniciar la imagen del usb (como le paso a mariano). Luego seleccionar versión de prueba haciendo click en "try".  
 Una vez iniciado el sistema y funcionando correctamente, nos dirijimos abajo a la derecha en la barra, y configuramos la conexión de red del pc, para poder acceder a internet. Agregamos una nueva red con los datos que guardamos aparte anteriormente.
 Puede pasar que ya exista un perfil anterior de conexión con otros datos incorrectos, en ese caso una vez creado el nuevo, debemos hacer click izquierdo en el logo de conexiones y seleccionar nuestro nuevo perfil. De esta forma accederemos a internet.
+
+## Clase 8 de Mayo
+
+La diferencia entre un hosting y un servidor, es que en el hosting nos permite menos recursos, pero a un precio más económico que un servidor.
+Los ínodos son todos los archivos de sistema que contienen información sobre como son almacenado los datos.
+
+> df -T //esto es parar 
+> df -h//human readable
+> df -ih//la i de inodo + human readable
+
+Tipos de archivo:
+- Sis ADM Archivos:
+
+	* Directorios (d)
+
+	* *Ficheros Regulares/Ordinarios  (-)
+
+	* Link  --> Simbólicos / Duros  (L)
+
+	* Pipes --> | / con Nombre FiFos  (P)
+
+	* Ficheros de bloques  (b)
+
+- Sis ADM Dispositivos:
+
+	* Ficheros especiales de caracteres  (c)
+
+
+Ubuntu como App dentro de windows, es muy útil.  
+```
+ls -i => podemos ver el número de inodo de un archivo.
+stat => vemos especificaciones del archivo.
+```
+[Wikipedia sobre Inodos](https://es.wikipedia.org/wiki/Inodo)  
+
+Un link duro no puede tener una dirección de otro sistema de archivos.
+´´´
+ln targetdirectoquesebusqueEnRutaAbsoluta.
+´´´
+
+Un **link duro** es un archivo regular (-), y es el mismo archivo que el orginal, en cambio los **links blandos** aparecen en celeste como los links y son un nuevo archivo.  
+Cuando creamos un link duro hacia un fichero por ejemplo, ambos tendrán el mismo número de Inodo.  
+Esto se puede ver con 'ls -il'. Entonces, es posible tener muchos nombres de archivos, con el mismo inodo.
+Al crear un enlace blando con 'ln -s' no tiene el mismo inodo porque es un archivo nuevo.  
+Cuando un archivo es eliminado, su **link duro** contiene aún su información, en cambio en los enlaces blandos no se pueden acceder por que el archivo base ya no existe. Una vez eliminados tanto el archivo como sus enlaces, en ese momento el inodo ya se elimina completamente.
