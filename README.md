@@ -247,7 +247,7 @@ Puede pasar que ya exista un perfil anterior de conexión con otros datos incorr
 ## Clase 8 de Mayo
 
 La diferencia entre un hosting y un servidor, es que en el hosting nos permite menos recursos, pero a un precio más económico que un servidor.
-Los ínodos son todos los archivos de sistema que contienen información sobre como son almacenado los datos.
+Los ínodos son un tipo de estructura de datos utilizada en **unix** donde son almacenados metadatos, los cuales son datos que describen otros datos.
 
 > df -T //esto es parar 
 > df -h//human readable
@@ -258,7 +258,7 @@ Tipos de archivo:
 
 	* Directorios (d)
 
-	* *Ficheros Regulares/Ordinarios  (-)
+	* Ficheros Regulares/Ordinarios  (-)
 
 	* Link  --> Simbólicos / Duros  (L)
 
@@ -279,12 +279,18 @@ stat => vemos especificaciones del archivo.
 [Wikipedia sobre Inodos](https://es.wikipedia.org/wiki/Inodo)  
 
 Un link duro no puede tener una dirección de otro sistema de archivos.
-´´´
-ln targetdirectoquesebusqueEnRutaAbsoluta.
-´´´
 
 Un **link duro** es un archivo regular (-), y es el mismo archivo que el orginal, en cambio los **links blandos** aparecen en celeste como los links y son un nuevo archivo.  
 Cuando creamos un link duro hacia un fichero por ejemplo, ambos tendrán el mismo número de Inodo.  
 Esto se puede ver con 'ls -il'. Entonces, es posible tener muchos nombres de archivos, con el mismo inodo.
 Al crear un enlace blando con 'ln -s' no tiene el mismo inodo porque es un archivo nuevo.  
-Cuando un archivo es eliminado, su **link duro** contiene aún su información, en cambio en los enlaces blandos no se pueden acceder por que el archivo base ya no existe. Una vez eliminados tanto el archivo como sus enlaces, en ese momento el inodo ya se elimina completamente.
+Cuando un archivo es eliminado, su **link duro** contiene aún su información, en cambio en los enlaces blandos no se pueden acceder por que el archivo base ya no existe. Una vez eliminados tanto el archivo como sus enlaces, en ese momento el inodo ya se elimina completamente.  
+- Entonces para **crear** links debemos hacer:
+
+	* Links duro = ln [ruta del enlace simbólico]
+
+	* Link blando =  ' ln -s [ruta del archivo o directorio original] [ruta del enlace simbólico] '
+
+## Clase 12 de Mayo
+Hacemos práctica de parcial, con primera parte forms [teórico 2025](https://docs.google.com/forms/d/e/1FAIpQLSd3CcUw-RVHSNZEU0eu0mn6kpm8pUFS_5MaZKM_S12h5rU_Sg/viewform?pli=1&pli=1) (mi resultado es [este](https://docs.google.com/forms/d/e/1FAIpQLSd3CcUw-RVHSNZEU0eu0mn6kpm8pUFS_5MaZKM_S12h5rU_Sg/viewscore?pli=1&pli=1&viewscore=AE0zAgBBS5K8PDtQ_j0YHZ2OX1sJl2FpGqj9BiMQhjE00fNSBXoNSvpmELekMFo1nA)), y luego una actividad práctica en la consola (ver recursos).  
+-- Para copiar un directorio con archivos y directorios podemos usar: cp -r [origen] [destino]  
