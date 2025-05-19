@@ -1,6 +1,6 @@
-# Notas de Clase **Sistemas Operativos** -- 2025
-Profesor: Roger Asis  
-
+# Notas de Clase de **Sistemas Operativos | 2025**
+> Profesor: Roger Asis.  
+Alumno: Sebastián Alejo Markoja.  
 TID material de estudio: [13.pdf](https://materiales.ies21.edu.ar/13.pdf)
 
 ## Clase 7 de Abril
@@ -294,15 +294,16 @@ Cuando un archivo es eliminado, su **link duro** contiene aún su información, 
 ## Clase 12 de Mayo
 Hacemos práctica de parcial, con primera parte forms [teórico 2025](https://docs.google.com/forms/d/e/1FAIpQLSd3CcUw-RVHSNZEU0eu0mn6kpm8pUFS_5MaZKM_S12h5rU_Sg/viewform?pli=1&pli=1) (mi resultado es [este](https://docs.google.com/forms/d/e/1FAIpQLSd3CcUw-RVHSNZEU0eu0mn6kpm8pUFS_5MaZKM_S12h5rU_Sg/viewscore?pli=1&pli=1&viewscore=AE0zAgBBS5K8PDtQ_j0YHZ2OX1sJl2FpGqj9BiMQhjE00fNSBXoNSvpmELekMFo1nA)), y luego una actividad práctica en la consola (ver recursos).  
 -- Para copiar un directorio con archivos y directorios podemos usar: cp -r [origen] [destino]  
-## Clase 19 de Mayo
-Revisamos el parcial.
-Los tipos de ficheros que existen son 5, ver [tipos de ficheros](#ficheros)  
+## Clase 19 de Mayo | Revisión del Parcial 1
+Revisamos el parcial.  
+Los tipos de ficheros que existen son 5, ver [tipos de ficheros](#ficheros).  
+#### Registros:
 - Registro físico: Un registro físico o bloque es la unidad de información que realmente se lee o escribe de un
 dispositivo.
 - Un registro lógico es un conjunto de datos manejado como una unidad desde el punto de vista del
 usuario
 
-Como su nombre lo indica, el Sistema Operativo (SO) es un conjunto variado de programas con fines diversos,
+El Sistema Operativo (SO) es un conjunto variado de programas con fines diversos,
 agrupados lógicamente en subsistemas, cada uno de los cuales cumple una labor determinada y específica,
 supervisados por un programa que cumple la tarea de controlar la actividad de la CPU denominado
 "Supervisor".
@@ -312,3 +313,14 @@ La frase “el disco se encuentra fragmentado” significa... Que los clusters q
 disminuye el rendimiento.  
 En un echo, si se quiere hacer un "enter" o salto de línea debemos hacer echo -e "y en alguna parte pondremos esto \n para saltar de línea.".  
 Al crear un Enlace Simbólico hay que siempre usar una ruta *Absoluta* para el origen del archivo al que queremos redirigir, luego en la ruta donde se guardará sí puede ser una ruta relativa.  
+
+### Funciones del Administrador del Sistema de Archivos
+(pág. 70)  
+El Administrador del Sistema de Archivos implementa varias características clave para optimizar el rendimiento del acceso al sistema de almacenamiento:
+
+* **Optimizador de búsqueda:** Minimiza los tiempos de búsqueda en disco al ordenar las escrituras y asegurar accesos múltiples a los sectores.
+* **Buffer caché:** Utiliza una memoria intermedia inteligente para almacenar bloques de datos, reduciendo los accesos directos al disco. La lectura es síncrona, mientras que la escritura suele ser asíncrona para acelerar la respuesta al cliente. Se priorizan las lecturas sobre las escrituras, excepto cuando la caché está casi llena o se trata de bloques críticos del sistema de archivos (que se escriben sincrónicamente). Las aplicaciones pueden influir en el comportamiento de escritura por archivo.
+* **Multiencadenado:** Permite manejar múltiples dispositivos de E/S simultáneamente, explotando el paralelismo para acceder a varios dispositivos en paralelo y atender solicitudes desde la caché mientras se realizan otras operaciones en disco.
+* **Prioridad al manejador del cliente:** El Administrador puede gestionar las prioridades de los procesos que realizan solicitudes.
+* **Archivos temporarios:** Para archivos de corta duración, el Administrador intenta mantener los bloques en la caché y solo los escribe a disco si es estrictamente necesario.
+* **Discos de RAM:** Permite simular un disco en la memoria RAM, mejorando significativamente el rendimiento de lectura/escritura al eliminar la latencia del acceso físico. El Administrador puede omitir la caché para los discos de RAM.
