@@ -324,3 +324,38 @@ El Administrador del Sistema de Archivos implementa varias características clav
 * **Prioridad al manejador del cliente:** El Administrador puede gestionar las prioridades de los procesos que realizan solicitudes.
 * **Archivos temporarios:** Para archivos de corta duración, el Administrador intenta mantener los bloques en la caché y solo los escribe a disco si es estrictamente necesario.
 * **Discos de RAM:** Permite simular un disco en la memoria RAM, mejorando significativamente el rendimiento de lectura/escritura al eliminar la latencia del acceso físico. El Administrador puede omitir la caché para los discos de RAM.
+
+## Clase 26 de Mayo
+## Backups: 
+Son un tipo de resguardo de información, una copia de seguridad. Son útiles frente a situaciones adversas de pérdida de discos de almacenamiento, pero no es práctico o rápido para poder seguir trabajando sobre los mismos inmediatamente.
+### Tipos de Backups:
+* Completo
+> Contienen toda la información, todos los datos y archivos. Tardan más tiempo en realizarse, y al mismo tiempo no pueden utilizarse los recursos que se están guardando. 
+* Incremental
+> En este caso solo se copian los últimos archivos modificados desde el último backup. Esto ahorra tiempo y espacio. Pero su restauración puede ser más compleja ya que  deben tenerse todos los backups incrementales desde el último completo.
+* Diferencial
+> Se guardan todos los archivos que han sido modificados, pero siempre trabajan sobre el mismo archivo a diferencia de los incrementales que van generando un nuevo archivo de respaldo por cada cambio.  
+Si tenemos un servidor de backup, debe funcionar de forma autónoma, teniendo permisos de acceso a los datos que quiere guardar. Ya que si es administrado por algo externo al mismo, si llega a ser afectado también afectará todo el backup.  
+
+Almacenamiento online (ya conectado), offline (externo y lejano), y nearline (externo y cercano).
+
+### Raid
+![Los raid](Recursos/image-1.png)
+
+La diferencia existente entre RAIDS y los Backups, es que los RAID mantienen la disponibilidad de los datos, ya que se hacen al instante luego del cambio, pueden seguir usándose, y además si un disco falla se puede seguir accediendo a los datos.  
+Los backups protegen de una gran variedad de fallos que los raid no como por ejemplo errores humanos, virus, etc. 
+#### Partes de un Raid
+![partes](Recursos/image-2.png)
+![partes](Recursos/image-3.png)
+
+#### Niveles de RAID
+![Niveles raid](Recursos/image-4.png)
+![stripping](Recursos/image-5.png)
+
+#### Sistemas de almacenamiento de tipo 
+* Online: Normalmente nunca pueden ser bajo costo, alta disponibilidad y alta performance de E/S al mismo tiempo.
+![tendencias raid](Recursos/image-6.png)
+
+#### Confiabilidad y disponibilidad de datos
+![confiabilidad](Recursos/image-7.png)
+Vemos los niveles de RAID en la presentación del profe. El raid 0 no tiene redundancia; el raid 3 es lento (lee y escribe todos los discos al mismo tiempo y se necesita un disco con datos de paridad); raid 5 tiene acceso independiente y distribuye los datos de paridad entre los discos; el raid 6 tiene una paridad doble, por ello permite continuar en caso de falla de dos discos.
