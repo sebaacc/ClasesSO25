@@ -359,3 +359,37 @@ Los backups protegen de una gran variedad de fallos que los raid no como por eje
 #### Confiabilidad y disponibilidad de datos
 ![confiabilidad](Recursos/image-7.png)
 Vemos los niveles de RAID en la presentación del profe. El raid 0 no tiene redundancia; el raid 3 es lento (lee y escribe todos los discos al mismo tiempo y se necesita un disco con datos de paridad); raid 5 tiene acceso independiente y distribuye los datos de paridad entre los discos; el raid 6 tiene una paridad doble, por ello permite continuar en caso de falla de dos discos.
+
+## Clase 29 de Mayo - Apache2 y HTML
+```
+sudo apt-get update => para actualizar los paquetes de programas nada más.
+
+sudo apt-get install apache2 => para instalar apache dos. El sudo es necesario para tener permisos.
+
+existe "sudo apt-get upgrade" pero tarda mucho ya que actualiza absolutamte todo.
+
+Con "sudo kill 2505" se finaliza el proceso con número PID 2505.
+Con "service apache2 status" nos dda el estado actual. 
+"hostname -I" para ver la IP virtual. Con esta ip accedemos al apache en la web.
+sudoapt install net-tools
+```
+
+/var/www/html => acá se edita el index.html de la pagina.  
+
+con <!-- esto es un comentario -->  
+<meta charset="UTF-8"> esto se puede poner entre las etiquetas head para que admita todos los acentos.  
+```
+<a href="https://www.google.com">Link a google</a>  
+```
+con F12 se puede ver en chrome todos los elementos de la página.  
+con ifconfig se puede ver la ip.  
+Lo siguiente para copiar y mandar nuestro archivo index desde el ubuntu con apache a nuestro usuario en el server de la materia:  
+sudo scp -P  8632 index.html nusuario@190.210.55.43:/home/nusuario/nombre.html  => y después pregunta la contraseña del usuario.
+
+### Como compartir la página y abrir un puerto:
+
+1. Primero en abrir nueva regla de entrada en Firewall avanzado. Creamos regla de entrada de un puerto 80.
+2. Luego buscamos nuestra ip de la pc y de la maquina virtual de ubuntu.
+3. Esto es para hacer un port forward (en connectaddress se pone la ip virtual del ubuntu):  
+netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=172.22.87.119
+4. Y ahora se podría acceder con la ip desde cualquier dispositivo.
