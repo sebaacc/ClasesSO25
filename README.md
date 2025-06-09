@@ -395,12 +395,12 @@ netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connect
 4. Y ahora se podría acceder con la ip desde cualquier dispositivo.
 ## Clase  3 de Junio
 Diferencia entre confiabilidad y disponibilidad.
-- La disponibilidad es lo cerca que se tiene el almacenamiento para acceder a los datos.
+- La disponibilidad se refiere a la probabilidad de que el sistema esté andando y sea accesible cuando se lo necesita.
 1. On line (inmediato, no específico en la nube sino siempre disponible).
 2. Near line (Cerca de estar disponible pero con más pasos).
 3. Off line o Cold line (Muchos pasos y mucha tardanza).
    
-- La confiabilidad es la característica que permite conservar los datos a pesar de la pérdida de alguno de los dispositivos de almacenamiento.
+- La confiabilidad es la probabilidad del sistema de funcionar constante y sin fallas durante un tiempo determinado, y hacer perdurar los datos.
 
 ## Clase 9 de Junio
 
@@ -408,3 +408,6 @@ Diferencia entre confiabilidad y disponibilidad.
 - El **primer** windows que **no** era un programa de otro sistema, sino un sistema operativo hecho por Microsoft fue Windows NT.  
 - Unix fue un software libre, y el abuelo de muchos sistemas (primera versión en 1969). Entre ellos Linux y macOS. Su diseño modular y eficiente, así como sus características como la multitarea y la estructura jerárquica de archivos, lo convirtieron en un estándar en la informática.  
 - El Proyecto GNU de Richard Stallman, 1971, fue el proyecto para software libre.  
+**No va nada de la SP3 del TID, ya que es muy vieja la info que nos da.**
+**SP4 sólo toma la parte práctica que vimos en clase**
+Administración de la Memoria:
