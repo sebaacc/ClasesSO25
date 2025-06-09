@@ -393,3 +393,18 @@ sudo scp -P  8632 index.html nusuario@190.210.55.43:/home/nusuario/nombre.html  
 3. Esto es para hacer un port forward (en connectaddress se pone la ip virtual del ubuntu):  
 netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=172.22.87.119
 4. Y ahora se podría acceder con la ip desde cualquier dispositivo.
+## Clase  3 de Junio
+Diferencia entre confiabilidad y disponibilidad.
+- La disponibilidad es lo cerca que se tiene el almacenamiento para acceder a los datos.
+1. On line (inmediato, no específico en la nube sino siempre disponible).
+2. Near line (Cerca de estar disponible pero con más pasos).
+3. Off line o Cold line (Muchos pasos y mucha tardanza).
+   
+- La confiabilidad es la característica que permite conservar los datos a pesar de la pérdida de alguno de los dispositivos de almacenamiento.
+
+## Clase 9 de Junio
+
+- WebMin => app web para gestión de un servidor, gratuita. Se puede hasta hacer particiones y raids desde ahí.  
+- El **primer** windows que **no** era un programa de otro sistema, sino un sistema operativo hecho por Microsoft fue Windows NT.  
+- Unix fue un software libre, y el abuelo de muchos sistemas (primera versión en 1969). Entre ellos Linux y macOS. Su diseño modular y eficiente, así como sus características como la multitarea y la estructura jerárquica de archivos, lo convirtieron en un estándar en la informática.  
+- El Proyecto GNU de Richard Stallman, 1971, fue el proyecto para software libre.  
