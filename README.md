@@ -411,3 +411,51 @@ Diferencia entre confiabilidad y disponibilidad.
 **No va nada de la SP3 del TID, ya que es muy vieja la info que nos da.**
 **SP4 sólo toma la parte práctica que vimos en clase**
 Administración de la Memoria:
+
+## Clase 12 de Junio
+Utilización de memoria RAM:  
+La segmentación divide la memoria en espacios de disco que son variables.
+Cuando el sistema ve que se le está acabando la memoria ram, y hay servicios que hace mucho no se utilizan, estos son movidos a una memoria virtual, generada dentro de un disco duro.  
+- Memoria virtual controlada por el Sistema Operativo. Windows usa un archivo para esta memoria, mientras que Linux usa una partición de disco.  
+- Memoria RAM controlada por un controlador de memoria.  
+
+Cuando hay mucha memoria ram, no se necesita casi memoria virtual, se puede ver el disco **sin archivos de partición**.  
+
+Jerarquía de la memoria:
+1. Registros Procesador.
+2. Caché CPU.
+3. Memoria RAM.
+4. Memoria Secundaria.  
+
+Para crear una **Memoria virtual** (MiB Swap) siempre es preferible un SSD por sobre un HDD.  
+### Hacemos práctica para el parcial:
+- Los **puertos de red** se clasifican en tres categorías: puertos bien conocidos (0-1023), puertos registrados (1024-49151) y puertos dinámicos/privados (49152-65535).
+- Multics es el Sistema Operativo del que derivan  FreeBSD, NetBSD, OpenBSD, macOS y la mayoría de las versiones Linux. **FALSO**
+- Las tareas del Administrador de Datos son: Controlar el manipuleo de los Datos y las técnicas de archivos.
+- Un intérprete de comandos fundamental en sistemas tipo Unix/Linux es: Bash.
+- Backup: Los backup incrementales requieren menos espacio de almacenamiento. Y los backup diferenciales ocupan más espacio de almacenamiento a medida que aumenta el tiempo transcurrido desde la última copia de seguridad completa.
+- ¿Cuál de las siguientes afirmaciones describe con mayor precisión la relación y el propósito de la RAM, la segmentación y la paginación? Explicación Detallada:
+	- RAM (Memoria RAM):
+		- Es la memoria volátil donde se almacenan los datos y programas que se están utilizando en el momento. Permite al procesador acceder rápidamente a la información, haciendo que el ordenador funcione de forma eficiente. 
+	- Segmentación:
+		- Esta técnica divide la memoria en segmentos de tamaño variable. Cada segmento puede contener diferentes partes de un programa, como código, datos o pila. El sistema operativo mantiene una tabla de segmentos que relaciona cada segmento con una ubicación física en la memoria. 
+	- Paginación:
+		- La paginación divide tanto la memoria lógica (el espacio de direcciones del proceso) como la memoria física (la RAM) en bloques de igual tamaño llamados páginas y marcos, respectivamente. El sistema operativo utiliza una tabla de páginas para mapear cada página lógica a su marco físico en la RAM. 
+	- Relación entre Segmentación y Paginación:
+		- La segmentación y la paginación pueden utilizarse en combinación. La segmentación puede crear una estructura lógica para la organización de la memoria, y luego la paginación puede facilitar la implementación eficiente de esa estructura en la memoria física. 
+- ¿Cuáles son las partes constitutivas del Sistema de Procesamiento de Datos? El soporte físico, el soporte lógico y el soporte de datos.
+- ¿Qué tareas realizan los Procesadores de Lenguaje? Todas las necesarias para convertir un programa en un proceso.
+ 
+- ¿Cuál es el objetivo principal de una interrupción en un sistema operativo? Optimizar el uso del procesador.
+
+- El Administrador de Interrupciones maneja:
+	1. Interrupción por llamada al sistema.
+	2. Interrupciones para la recuperación de errores.
+	3. Interrupción condicional.
+	4. Interrupciones de Entrada/Salida.  
+
+- Para utilizar un Sistema Operativo Live es necesario tener un disco duro. **VERDADERO**  
+
+[link a respuestas seba](https://docs.google.com/forms/d/e/1FAIpQLSepA5gZ_rwqSI_ebldmCBgXItbSLgWgLrO9JPbyu6A-AcZjVg/viewscore?pli=1&pli=1&viewscore=AE0zAgDjuYYKF3W-YlkwaZ_Jfxmr9NWrcF4UafF77TmRjBC2YH0gR4vaZ3petZAU_Q) 
+
+[link a respuestas mariano](https://docs.google.com/forms/d/e/1FAIpQLSepA5gZ_rwqSI_ebldmCBgXItbSLgWgLrO9JPbyu6A-AcZjVg/viewscore?pli=1&pli=1&viewscore=AE0zAgCM059bxvGws5dxqbyzCXOxTzEA-TLX_VPN5dz5knxeczjxPamTMfw8xyDqjw) 
