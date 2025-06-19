@@ -459,3 +459,16 @@ Para crear una **Memoria virtual** (MiB Swap) siempre es preferible un SSD por s
 [link a respuestas seba](https://docs.google.com/forms/d/e/1FAIpQLSepA5gZ_rwqSI_ebldmCBgXItbSLgWgLrO9JPbyu6A-AcZjVg/viewscore?pli=1&pli=1&viewscore=AE0zAgDjuYYKF3W-YlkwaZ_Jfxmr9NWrcF4UafF77TmRjBC2YH0gR4vaZ3petZAU_Q) 
 
 [link a respuestas mariano](https://docs.google.com/forms/d/e/1FAIpQLSepA5gZ_rwqSI_ebldmCBgXItbSLgWgLrO9JPbyu6A-AcZjVg/viewscore?pli=1&pli=1&viewscore=AE0zAgCM059bxvGws5dxqbyzCXOxTzEA-TLX_VPN5dz5knxeczjxPamTMfw8xyDqjw) 
+
+## Haciendo TP en el server de la materia:
+
+> ls -r ~/Practicas2/Descomprimir/Directorio3 | grep ".conf" > ~/Practicas2/Descomprimir/Directorio1/Conf.txt
+- ls: Lista el contenido del directorio.
+- r: Ordena los resultados en orden alfabético inverso.
+- ~/Practicas2/Descomprimir/Directorio3: Es la ruta al directorio donde están tus archivos.
+- |: Este es el "pipe" (tubería). Envía la salida del comando ls (la lista de archivos) como entrada al siguiente comando, que en este caso es grep.
+- grep ".conf":
+- grep: Es una utilidad para buscar patrones de texto en archivos o en la entrada estándar.
+- ".conf": Es el patrón que grep buscará si los nombres lo contienen.
+- ">" es para guardar la salida, en Conf.txt
+De esta misma manera con grep podemos filtrar por fecha, como buscar todos los registros del mes de marzo con grep " mar ".
