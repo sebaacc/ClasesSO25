@@ -472,3 +472,11 @@ Para crear una **Memoria virtual** (MiB Swap) siempre es preferible un SSD por s
 - ".conf": Es el patrón que grep buscará si los nombres lo contienen.
 - ">" es para guardar la salida, en Conf.txt
 De esta misma manera con grep podemos filtrar por fecha, como buscar todos los registros del mes de marzo con grep " mar ".
+
+Creando pagina con apache y php:
+- sudo apt update
+- sudo apt install apache2 && sudo apt install php
+- sudo service apache2 start
+- acceder a http://localhost y debe mostrarse la página de apache "It works".
+- Luego modificar el .html (si no se puede, antes cambiar permisos con sudo chmod 777)
+- luego agregar el php y el archivo donde se guardan los datos.
