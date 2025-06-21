@@ -383,6 +383,7 @@ con <!-- esto es un comentario -->
 ```
 con F12 se puede ver en chrome todos los elementos de la página.  
 con ifconfig se puede ver la ip.  
+<a id="EnviarAServer"> #### Enviando archivos al servidor de la materia
 Lo siguiente para copiar y mandar nuestro archivo index desde el ubuntu con apache a nuestro usuario en el server de la materia:  
 sudo scp -P  8632 index.html nusuario@190.210.55.43:/home/nusuario/nombre.html  => y después pregunta la contraseña del usuario.
 
@@ -473,10 +474,15 @@ Para crear una **Memoria virtual** (MiB Swap) siempre es preferible un SSD por s
 - ">" es para guardar la salida, en Conf.txt
 De esta misma manera con grep podemos filtrar por fecha, como buscar todos los registros del mes de marzo con grep " mar ".
 
-Creando pagina con apache y php:
+#### Creando pagina con apache y php
+
 - sudo apt update
 - sudo apt install apache2 && sudo apt install php
 - sudo service apache2 start
 - acceder a http://localhost y debe mostrarse la página de apache "It works".
 - Luego modificar el .html (si no se puede, antes cambiar permisos con sudo chmod 777)
 - luego agregar el php y el archivo donde se guardan los datos.
+- lueo para enviar esto desde mi pc al servidor de la materia usamos el utilitario scp [-ver explicación más arriba](#EnviarAServer). La ruta destino la he cambiado por ~/Practicas2/Descomprimir/Directorio2.
+
+#### Instalando webmin
+
