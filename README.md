@@ -383,7 +383,8 @@ con <!-- esto es un comentario -->
 ```
 con F12 se puede ver en chrome todos los elementos de la página.  
 con ifconfig se puede ver la ip.  
-<a id="EnviarAServer"> #### Enviando archivos al servidor de la materia
+<a id="EnviarAServer">
+#### Enviando archivos al servidor de la materia
 Lo siguiente para copiar y mandar nuestro archivo index desde el ubuntu con apache a nuestro usuario en el server de la materia:  
 sudo scp -P  8632 index.html nusuario@190.210.55.43:/home/nusuario/nombre.html  => y después pregunta la contraseña del usuario.
 
@@ -486,3 +487,21 @@ De esta misma manera con grep podemos filtrar por fecha, como buscar todos los r
 
 #### Instalando webmin
 
+1. Actualizar los paquetes y requisitos  
+Abre la terminal de Ubuntu y ejecuta:  
+> sudo apt update
+> sudo apt install -y software-properties-common apt-transport-https wget  
+2. Agregar el repositorio de Webmin
+Importa la clave GPG de Webmin:  
+
+> wget -q https://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -  
+Agrega el repositorio oficial de Webmin:  
+> echo "deb https://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webmin.list  
+3. Instalar Webmin  
+>sudo apt update
+>sudo apt install -y webmin
+  
+Luego para acceder a webmin en el navegador me sirvió entrar en https://localhost:10000 pero también puede funcionar https://127.0.0.1:10000 . Es una conexión "no segura" por ello hay que hacer click en "avanzado" y acceder al sitio.
+
+Luego fui a la terminal de webmin y entré al server de la materia con ssh. Hice el comando cmatrix, y flaye que estaba en la matrix O.o .  
+Recomendadísimo instalarlo en WSL local de tu pc, con sudo apt install cmatrix, y poder usarlo nuevamente.  
