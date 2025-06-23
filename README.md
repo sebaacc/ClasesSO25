@@ -505,3 +505,53 @@ Luego para acceder a webmin en el navegador me sirvió entrar en https://localho
 
 Luego fui a la terminal de webmin y entré al server de la materia con ssh. Hice el comando cmatrix, y flaye que estaba en la matrix O.o .  
 Recomendadísimo instalarlo en WSL local de tu pc, con sudo apt install cmatrix, y poder usarlo nuevamente.  
+
+## Haciendo repaso antes de parcial IEFI
+
+[Mi form](https://docs.google.com/forms/d/e/1FAIpQLSdxDZTUb2aMb2WVdKh3P5Zr2EgyjBaNKaBmINjj7ZAQIBytPw/viewscore?pli=1&pli=1&viewscore=AE0zAgBVqVHT6QWDQX_Hb8EVwLB8sXe3Cln-AG0PoYPVYIepjmtCO2YG-Bszyzedow)  
+
+Actividad Práctica:
+Aquí tienes la transcripción del texto de la imagen:
+
+A. Crear un directorio en su home llamado "Repaso".
+
+B. Descargar el fichero de la url http://tesis.ies21.edu.ar/tesis/practico/Repaso.txt
+Nota: Si un Directorio o Fichero no existe debe crearlo
+
+Copiar el directorio "Directorio3" ubicado en /home/Comunitario/ y pegarlo en un directorio llamado "Repaso" en tu home.
+
+Utiliza el comando "Word Count" para guardar la cantidad de ficheros existentes en el directorio "Directorio3" en un fichero llamado "CantidadFicheros.txt" ubicado en "Repaso".
+
+Lista los ficheros que comienzan con "ma" del directorio "Directorio3" y a su salida ponerla en un fichero llamado "ComienzanConMa.txt" ubicado en "Repaso".
+
+Copia los ficheros que comienzan con "ma" del directorio "Directorio3" y pégalos en un directorio llamado "ComienzanConMa" ubicado en "Repaso".
+
+Crear un directorio llamado "Ficheros" que se encuentre dentro otros directorios anidados Repaso, Directorios, Linux, Perro, Gato, Liebre, Alumno, Nublado, Soleado y por último Ficheros.
+
+Lista el contenido del directorio /home/Comunitario/algo/.
+
+Crear un fichero llamado "Inodo.txt" en el directorio Repaso, en el copia el contenido del fichero "oculto.txt" ubicado en /home/Comunitario/algo/.
+
+Crea un directorio llamado "Enlaces" en Repaso.
+
+Lista solo el inodo del fichero Inodo.txt y colocalo en el fichero NumeroInodo.txt dentro de Repaso.
+
+Crear un enlace simbólico al fichero Inodo.txt llamado Enlace-B-Inodo.In y sitúalo en Enlaces.
+
+Lista solo el inodo del fichero Enlace-B-Inodo.In y adjuntarlo en el fichero NumeroInodo.txt dentro de Repaso.
+
+Crear un enlace duro al fichero Inodo.txt llamado Enlace-D-Inodo.In y sitúalo en Enlaces.
+
+Lista solo el inodo del fichero Enlace-D-Inodo.In y adjuntarlo en el fichero NumeroInodo.txt dentro de Repaso.
+
+Adjunta en el fichero NumeroInodo.txt cuales son los nombres de los ficheros que tienen el mismo número de inodo y qué significa esto.
+
+Crear un directorio llamado Permisos en Repaso.
+
+En el directorio Permisos crea 20 ficheros llamados desde "archivo1" al "archivo20".
+
+Asigna al fichero archivo5 los permisos --rwxr-x--x A archivo9 --rw------- y a archivo20 permisos 753 (modo octal).
+
+Mover el fichero crontab ubicado en Directorio3 al directorio Permisos.
+
+Descargar el fichero de la url http://tesis.ies21.edu.ar/tesis/practico/Inodo2.txt y concatenarlo a Inodo.txt.
