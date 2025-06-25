@@ -526,9 +526,12 @@ Utiliza el comando "Word Count" para guardar la cantidad de ficheros existentes 
 Lista los ficheros que comienzan con "ma" del directorio "Directorio3" y a su salida ponerla en un fichero llamado "ComienzanConMa.txt" ubicado en "Repaso".  
 > ls | grep "^ma" | wc -l  
 
-Copia los ficheros que comienzan con "ma" del directorio "Directorio3" y pégalos en un directorio llamado "ComienzanConMa" ubicado en "Repaso".
+Copia los ficheros que comienzan con "ma" del directorio "Directorio3" y pégalos en un directorio llamado "ComienzanConMa" ubicado en "Repaso".  
+> mkdir Directorio3/ComienzanConMa && cp Directorio3/ma* ~/Repaso/Directorio3/ComienzanConMa/
+> Ya que ma* serían todos los que comienzan con ma, *ma* los que contengan ma, y *ma los que terminen con ma.  
 
-Crear un directorio llamado "Ficheros" que se encuentre dentro otros directorios anidados Repaso, Directorios, Linux, Perro, Gato, Liebre, Alumno, Nublado, Soleado y por último Ficheros.
+Crear un directorio llamado "Ficheros" que se encuentre dentro otros directorios anidados Repaso, Directorios, Linux, Perro, Gato, Liebre, Alumno, Nublado, Soleado y por último Ficheros.  
+> mkdir -p ~/Repaso/Directorios/Linux/Perro/Gato/Liebre/Alumno/Nublado/Soleado/Ficheros
 
 Lista el contenido del directorio /home/Comunitario/algo/.
 
@@ -536,7 +539,10 @@ Crear un fichero llamado "Inodo.txt" en el directorio Repaso, en el copia el con
 
 Crea un directorio llamado "Enlaces" en Repaso.
 
-Lista solo el inodo del fichero Inodo.txt y colocalo en el fichero NumeroInodo.txt dentro de Repaso.
+Lista solo el inodo del fichero Inodo.txt y colocalo en el fichero NumeroInodo.txt dentro de Repaso.  
+> ls -i miArchivo.txt muestra el número de inodo seguido del nombre del archivo.
+> awk '{print $1}' toma solo el primer campo, es decir, el número de inodo.  
+> redirige la salida al archivo inodo.txt.  
 
 Crear un enlace simbólico al fichero Inodo.txt llamado Enlace-B-Inodo.In y sitúalo en Enlaces.
 
@@ -550,7 +556,8 @@ Adjunta en el fichero NumeroInodo.txt cuales son los nombres de los ficheros que
 
 Crear un directorio llamado Permisos en Repaso.
 
-En el directorio Permisos crea 20 ficheros llamados desde "archivo1" al "archivo20".
+En el directorio Permisos crea 20 ficheros llamados desde "archivo1" al "archivo20".  
+> touch archivo{1..20}
 
 Asigna al fichero archivo5 los permisos --rwxr-x--x A archivo9 --rw------- y a archivo20 permisos 753 (modo octal).
 
