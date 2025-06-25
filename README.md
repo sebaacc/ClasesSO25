@@ -520,9 +520,11 @@ Nota: Si un Directorio o Fichero no existe debe crearlo
 
 Copiar el directorio "Directorio3" ubicado en /home/Comunitario/ y pegarlo en un directorio llamado "Repaso" en tu home.
 
-Utiliza el comando "Word Count" para guardar la cantidad de ficheros existentes en el directorio "Directorio3" en un fichero llamado "CantidadFicheros.txt" ubicado en "Repaso".
+Utiliza el comando "Word Count" para guardar la cantidad de ficheros existentes en el directorio "Directorio3" en un fichero llamado "CantidadFicheros.txt" ubicado en "Repaso".  
+> ls -l | wc -l  
 
-Lista los ficheros que comienzan con "ma" del directorio "Directorio3" y a su salida ponerla en un fichero llamado "ComienzanConMa.txt" ubicado en "Repaso".
+Lista los ficheros que comienzan con "ma" del directorio "Directorio3" y a su salida ponerla en un fichero llamado "ComienzanConMa.txt" ubicado en "Repaso".  
+> ls | grep "^ma" | wc -l  
 
 Copia los ficheros que comienzan con "ma" del directorio "Directorio3" y pégalos en un directorio llamado "ComienzanConMa" ubicado en "Repaso".
 
