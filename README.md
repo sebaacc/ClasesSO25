@@ -490,15 +490,20 @@ De esta misma manera con grep podemos filtrar por fecha, como buscar todos los r
 1. Actualizar los paquetes y requisitos  
 Abre la terminal de Ubuntu y ejecuta:  
 > sudo apt update
-> sudo apt install -y software-properties-common apt-transport-https wget  
+
+> sudo apt install -y software-properties-common apt-transport-https wget
+
 2. Agregar el repositorio de Webmin
 Importa la clave GPG de Webmin:  
 
-> wget -q https://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -  
+> wget -q https://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+
 Agrega el repositorio oficial de Webmin:  
-> echo "deb https://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webmin.list  
+> echo "deb https://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webmin.list
+
 3. Instalar Webmin  
 >sudo apt update
+
 >sudo apt install -y webmin
   
 Luego para acceder a webmin en el navegador me sirvió entrar en https://localhost:10000 pero también puede funcionar https://127.0.0.1:10000 . Es una conexión "no segura" por ello hay que hacer click en "avanzado" y acceder al sitio.
